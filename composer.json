@@ -1,0 +1,30 @@
+{
+    "name": "rmasters/thawcast",
+    "description": "Retrieves Icecast2 server statistics",
+    "type": "library",
+    "keywords": [
+        "icecast",
+        "icecast2"
+    ],
+    "homepage": "http://github.com/rmasters/thawcast",
+    "license": "MIT",
+    "autoload": {
+        "psr-0": {
+            "Thawcast": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Ross Masters",
+            "email": "ross@rossmasters.com",
+            "homepage": "http://rossmasters.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.3"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "3.7.*"
+    }
+}
