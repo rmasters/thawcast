@@ -1,0 +1,3 @@
+Create loosely structured models/ArrayObjects for Responses to use for data storage.
+Fix tests for Requests/Responses mocking.
+Create a separate test suite for real Icecast usage?
