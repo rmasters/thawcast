@@ -5,4 +5,9 @@
             <directory>./</directory>
         </testsuite>
     </testsuites>
+    <php>
+        <var name="ICECAST_HOST" value="http://localhost:8000" />
+        <var name="ICECAST_ADMIN_USERNAME" value="admin" />
+        <var name="ICECAST_ADMIN_PASSWORD" value="password" />
+    </php>
 </phpunit>

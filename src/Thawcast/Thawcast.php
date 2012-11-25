@@ -9,12 +9,21 @@ namespace Thawcast;
 use InvalidArgumentException, LengthException, DomainException;
 
 /**
- * Thawcast 
+ * Holds the details of an icecast server
  */
 class Thawcast
 {
+    /**
+     * @var string The URL of the Icecast web admin site
+     */
     private $host;
+
+    /**
+     * @var array|null Admin credentials, if provided
+     */
     private $credentials;
+
+    const VERSION = '0.1';
 
     /**
      * Constructor
@@ -85,8 +94,8 @@ class Thawcast
         $url = sprintf('%s://%s:%d/%s', $urlParts['scheme'], $urlParts['host'],
             $urlParts['port'], $urlParts['path']);
 
-        // Ensure a trailing slash is present
-        $this->host = rtrim($url, '/') . '/';
+        // Ensure a trailing slash is not present
+        $this->host = rtrim($url, '/');
 
         return $this;
     }
@@ -132,5 +141,29 @@ class Thawcast
      */
     public function __toString() {
         return (string) $this->host;
+    }
+
+    /**
+     * Get the server statistics
+     * @return Thawcast\Response\Stats
+     */
+    public function stats() {
+        return Request\Stats::retrieve($this);
+    }
+
+    /**
+     * Get a list of sources
+     * @return Thawcast\Response\Mounts
+     */
+    public function mounts() {
+        return Request\Mounts::retrieve($this);
+    }
+
+    /**
+     * Get a user-agent to include in requests made
+     * @return string
+     */
+    public static function getUserAgent() {
+        return sprintf('Thawcast %s', self::VERSION);
     }
 }

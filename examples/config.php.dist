@@ -1,0 +1,11 @@
+<?php
+
+use Thawcast\Thawcast;
+
+$loader = require __DIR__ . "/../vendor/autoload.php";
+$loader->add('Thawcast', __DIR__ . '/../src');
+$loader->register();
+
+$server = new Thawcast('http://localhost:8000', array('admin', 'hackme'));
+
+return $server;
