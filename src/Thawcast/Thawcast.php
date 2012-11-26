@@ -160,6 +160,14 @@ class Thawcast
     }
 
     /**
+     * Get listeners for a source
+     * @return Thawcast\Response\Clients
+     */
+    public function clients($source) {
+        return Request\Clients::retrieve($this, array('mount' => $source));
+    }
+
+    /**
      * Get a user-agent to include in requests made
      * @return string
      */
