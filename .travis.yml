@@ -7,4 +7,4 @@ before_script:
   - composer install
   - cp tests/phpunit.xml.travis tests/phpunit.xml
 
-script: phpunit --configuration tests/phpunit.xml --coverage-text
+script: vendor/bin/phpunit --configuration tests/phpunit.xml --coverage-text
