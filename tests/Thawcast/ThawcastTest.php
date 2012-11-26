@@ -9,7 +9,7 @@ class ThawcastTest extends PHPUnit_Framework_TestCase
     public function testConstructor() {
         // Non-admin privileged
         $thawcast = new Thawcast('http://localhost');
-        $this->assertEquals('http://localhost:8000/', $thawcast->getHost());
+        $this->assertEquals('http://localhost:8000', $thawcast->getHost());
         $this->assertFalse($thawcast->hasCredentials());
 
         // Admin privileged
@@ -29,11 +29,11 @@ class ThawcastTest extends PHPUnit_Framework_TestCase
     public function testHost() {
         // Without port
         $thawcast = new Thawcast('http://localhost');
-        $this->assertEquals('http://localhost:8000/', $thawcast->getHost());
+        $this->assertEquals('http://localhost:8000', $thawcast->getHost());
 
         // With port
         $thawcast->setHost('http://localhost:1234');
-        $this->assertEquals('http://localhost:1234/', $thawcast->getHost());
+        $this->assertEquals('http://localhost:1234', $thawcast->getHost());
 
         // Without scheme or host
         $this->setExpectedException('InvalidArgumentException');
@@ -41,11 +41,15 @@ class ThawcastTest extends PHPUnit_Framework_TestCase
 
         // Without scheme
         $thawcast->setHost('//localhost');
-        $this->assertEquals('http://localhost:8000/', $thawcast->getHost());
+        $this->assertEquals('http://localhost:8000', $thawcast->getHost());
 
         // With HTTP credentials
         $thawcast->setHost('http://user:pass@localhost');
-        $this->assertEquals('http://localhost:8000/', $thawcast->getHost());
+        $this->assertEquals('http://localhost:8000', $thawcast->getHost());
+
+        // Thawcast::setHost($url) used to append slashes, ensure these are gone
+        $thawcast = new Thawcast('http://localhost/');
+        $this->assertTrue(substr($thawcast->getHost(), -1, 1) !== '/');
 
         // Malformed
         $this->setExpectedException('DomainException');
@@ -61,6 +65,6 @@ class ThawcastTest extends PHPUnit_Framework_TestCase
 
     public function testToString() {
         $thawcast = new Thawcast('http://localhost');
-        $this->assertEquals('http://localhost:8000/', (string) $thawcast);
+        $this->assertEquals('http://localhost:8000', (string) $thawcast);
     }
 }
