@@ -87,7 +87,7 @@ class Stats extends Response
                 'stream_start' => new \DateTime((string) $source->stream_start),
                 'title' => (string) $source->title,
                 'total_bytes_read' => (string) $source->total_bytes_read,
-                'total_bytes_sent' => (string) $source->total_bytes_sent',
+                'total_bytes_sent' => (string) $source->total_bytes_sent,
             );
         }
 

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<icestats>
+    <admin>icemaster@localhost</admin>
+    <client_connections>106909</client_connections>
+    <clients>3</clients>
+    <connections>108009</connections>
+    <file_connections>1652</file_connections>
+    <host>localhost</host>
+    <listener_connections>5343</listener_connections>
+    <listeners>0</listeners>
+    <location>Earth</location>
+    <server_id>Icecast 2.3.2</server_id>
+    <server_start>Fri, 19 Oct 2012 19:53:23 +0100</server_start>
+    <source_client_connections>37</source_client_connections>
+    <source_relay_connections>0</source_relay_connections>
+    <source_total_connections>37</source_total_connections>
+    <sources>2</sources>
+    <stats>0</stats>
+    <stats_connections>0</stats_connections>
+    <source mount="/live.mp3">
+        <audio_info>ice-samplerate=44100;ice-bitrate=192;ice-channels=2</audio_info>
+        <bitrate>192</bitrate>
+        <genre>various</genre>
+        <ice-bitrate>192</ice-bitrate>
+        <ice-channels>2</ice-channels>
+        <ice-samplerate>44100</ice-samplerate>
+        <listener_peak>12</listener_peak>
+        <listeners>0</listeners>
+        <listenurl>http://localhost:8000/live.mp3</listenurl>
+        <max_listeners>unlimited</max_listeners>
+        <public>0</public>
+        <server_description>Unspecified description</server_description>
+        <server_name>Icecast Radio</server_name>
+        <server_type>audio/mpeg</server_type>
+        <slow_listeners>19</slow_listeners>
+        <source_ip>141.163.204.33</source_ip>
+        <stream_start>Sat, 24 Nov 2012 18:33:57 +0000</stream_start>
+        <title />
+        <total_bytes_read>518021000</total_bytes_read>
+        <total_bytes_sent>1027215085</total_bytes_sent>
+    </source>
+    <source mount="/live.ogg">
+        <artist />
+        <audio_bitrate>70401</audio_bitrate>
+        <audio_channels>2</audio_channels>
+        <audio_info>ice-samplerate=44100;ice-bitrate=Quality 0.4;ice-channels=2</audio_info>
+        <audio_samplerate>44100</audio_samplerate>
+        <bitrate>Quality 0.4</bitrate>
+        <genre>various</genre>
+        <ice-bitrate>70</ice-bitrate>
+        <ice-channels>2</ice-channels>
+        <ice-samplerate>44100</ice-samplerate>
+        <listener_peak>6</listener_peak>
+        <listeners>0</listeners>
+        <listenurl>http://localhost:8000/live.ogg</listenurl>
+        <max_listeners>unlimited</max_listeners>
+        <public>0</public>
+        <server_description>Unspecified description</server_description>
+        <server_name>Icecast Radio</server_name>
+        <server_type>application/ogg</server_type>
+        <slow_listeners>16</slow_listeners>
+        <source_ip>141.163.204.33</source_ip>
+        <stream_start>Sat, 24 Nov 2012 18:33:57 +0000</stream_start>
+        <subtype>Vorbis</subtype>
+        <title />
+        <total_bytes_read>193670997</total_bytes_read>
+        <total_bytes_sent>126979963</total_bytes_sent>
+    </source>
+</icestats>
