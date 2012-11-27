@@ -1,7 +1,12 @@
 <?php
 /**
- * Thawcast
+ * Thawcast - Icecast analytics
+ *
  * @author Ross Masters <ross@rossmasters.com>
+ * @copyright Copyright (C) 2012 Ross Masters
+ * @license MIT http://github.com/rmasters/thawcast/blob/master/LICENSE
+ * @link http://github.com/rmasters/thawcast
+ * @package Thawcast
  */
 
 namespace Thawcast\Request;
