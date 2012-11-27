@@ -67,7 +67,8 @@ class Stats extends Response
          */
         $instance->sources = array();
         foreach ($icestats->source as $source) {
-            $instance->sources[] = array(
+            $mount = (string) $source['mount'];
+            $instance->sources[$mount] = array(
                 'audio_info' => (string) $source->audio_info,
                 'bitrate' => (string) $source->bitrate,
                 'genre' => (string) $source->genre,
